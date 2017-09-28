@@ -1,4 +1,4 @@
 #!/bin/bash
-docker rm -fv despachalo-rest-api-$1
+docker rm -fv despachalo-rest-api
 docker build -t despachalo-rest-api .
-docker run -d --privileged=true --name despachalo-rest-api-$1 -p $1:8084 despachalo-rest-api
+docker run -d --privileged=true -v /home/ubuntu/despachalo:/root/despachalo-rest-api --name despachalo-rest-api -p 3000:3000 despachalo-rest-api
