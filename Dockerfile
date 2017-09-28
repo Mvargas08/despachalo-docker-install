@@ -9,5 +9,5 @@ RUN mkdir -p /root/despachalo-rest-api && \
     npm install && \
     chmod +x /root/start.sh && \
     npm install forever -g
-EXPOSE 8084
+EXPOSE 3000
 CMD ["/root/start.sh"]
